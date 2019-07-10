@@ -16,10 +16,23 @@ const users = [
     img:
       "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=wavatar&f=y",
     job: "программист",
+    mail: "hmail@siete.com",
     comments: [{
       tel: "+79779993322",
-      head: "headhead",
+      head: "заголовок",
       text: "textddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }]
+  },
+  {
+    name: "Николай Николаев",
+    img:
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y",
+    job: "программист",
+    mail: "affg@gmail.com",
+    comments: [{
+      tel: "+79779993322",
+      head: "аааааааа",
+      text: "fsfds sdfsd fsdmksfm skm kskmfkmsd msdfm ksmksf dkm sksfd"
     }]
   }
 ];

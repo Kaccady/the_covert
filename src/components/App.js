@@ -7,7 +7,7 @@ import { FetchData } from "../actions/data";
 import AddUser from "./AddUser";
 
 function App({ hasErrored, fetchData, isLoading }) {
-  useEffect(() => fetchData("https://api.myjson.com/bins/1cuwrv"), [fetchData]);
+  useEffect(() => fetchData("https://api.myjson.com/bins/fn5pf"), [fetchData]);
 
   if (hasErrored) {
     return <p>Sorry! There was an error loading users</p>;
