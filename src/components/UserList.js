@@ -1,23 +1,28 @@
 import React from "react";
+import UserCard from "./UserCard";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const users = [
-    {
-      name: 'Антон Антонов',
-      img: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=monsterid&f=y',
-      job: 'дизайнер',
-      comments:[]
-    },
-    {
-      name: 'Андрей Андреев',
-      img: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=wavatar&f=y',
-      job: 'программист',
-      comments:[]
-    }
-  ];
 
-const UserList = () => {
-  return <div><h1>userlist</h1>
-      
-  </div>;
+const UserList = ({users}) => {
+  return (
+    <div className="content">
+      <h1>userlist</h1>
+      {users.map((user, i) => (
+        <Link key={i} to={`/user/` + i}>
+          <UserCard user={user} />
+        </Link>
+      ))}<Link to='/adduser/'>add user</Link>
+    </div>
+  );
 };
-export default UserList;
+
+const mapStateToProps = state => {
+  return {
+    users:state.data
+  };
+};
+
+export default connect(
+  mapStateToProps
+)(UserList);
